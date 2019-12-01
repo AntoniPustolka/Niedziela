@@ -1,0 +1,28 @@
+n = int(input('Podaj liczbe: '))
+silnia = 1
+
+for i in range(1, n+1):
+    silnia= silnia * i
+
+print(silnia)
+
+
+def silnia_rek(n):
+# Obliczanie silni rekurencyjnej
+    if n>1:
+         return n*silnia_rek(n-1)    #wywolanie rekurencyjne funkcji
+    elif n in (0,1):
+         return 1;
+
+def silnia_iter(n):
+# Obliczanie silni iteracyjniej
+
+    if n in (0,1):  #gdy n = 0 lub 1 zwroc 1
+         return 1
+    else:
+         for i in range(2,n+1):  #gdy n>1 mnoz przez kolejne liczby od 2 do n
+             silnia_tmp = silnia_tmp*i
+         return silnia_tmp
+
+print silnia_rek(n)
+print silnia_iter(n)
