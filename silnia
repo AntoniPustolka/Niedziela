@@ -1,3 +1,5 @@
+# Prosta silnia 
+
 n = int(input('Podaj liczbe: '))
 silnia = 1
 
